@@ -32,4 +32,13 @@ def addNewEntry():
     
     print("Entry added successfully.")
 
-
+def viewAllEntries():
+    log = loadLog()    
+    
+    for i in range(len(log)):
+        print("Project      : ", log[i]["Project"])
+        print("Responsible  : ", log[i]["Responsible"])
+        print("Title        : ", log[i]["Title"])
+        print("Description  : ", log[i]["Description"])
+        print("References   : ", log[i]["References"])
+        print("Date         : ", log[i]["Date"], "\n")
