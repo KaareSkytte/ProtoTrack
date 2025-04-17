@@ -20,11 +20,21 @@ def main():
     5. Exit
     """)    
 
-    if "5" in option or "exit" in option.lower():
-        exit()
 
     if "1" in option or "add" in option.lower():
         addNewEntry()
+
+    if "2" in option or "view" in option.lower():
+        viewAllEntries()
+
+    if "3" in option or "filter" in option.lower():
+        filterEntries()
+
+
+
+    if "5" in option or "exit" in option.lower():
+        exit()
+
 
 main()
 
