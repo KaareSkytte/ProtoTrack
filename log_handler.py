@@ -16,10 +16,14 @@ def ensureLogExists():
 
 
 def loadLog():
+    ensureLogExists()
     with open(logFile, 'r') as f:
-        return json.load(f)
+        try:
+            return json.load(f)
+        except json.JSONDecodeError:
+            return []
 
 
 def saveLog(data):
     with open(logFile, 'w') as f:
-        json.dump(data, f, ident=4)
+        json.dump(data, f, indent=4)

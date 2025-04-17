@@ -1,8 +1,6 @@
 import json
 from datetime import datetime
-
-
-
+from log_handler import * 
 
 def addNewEntry():
     projectName = input("Enter project name: ")
@@ -28,7 +26,10 @@ def addNewEntry():
     entry["References"] = references
     entry["Date"] = date
 
-    for y in entry:
-        print (y,':',entry[y])
+    logData = loadLog()
+    logData.append(entry)
+    saveLog(logData)
+    
+    print("Entry added successfully.")
 
-addNewEntry()
+
