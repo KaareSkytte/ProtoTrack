@@ -17,18 +17,19 @@
 
 ## Usage
 
-1. Run the script:
-   in bash
-   python3 main.py
+1. Run the script:\
+   in bash \
+   python3 main.py\
 
-2. Choose an action:
-    Add new log entry
-    View all entries
-    Filter entries
-    Export log
+2. Choose an action:\
+    Add new log entry\
+    View all entries\
+    Filter entries\
+    Export log\
 
 
-3. Follow the prompts: You'll be guided step-by-step via command line input.
+3. Follow the prompts:\
+   You'll be guided step-by-step via command line input.
 
 
 File Structure: 
