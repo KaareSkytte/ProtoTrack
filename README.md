@@ -32,22 +32,22 @@
 
 
 File Structure: 
-ProtoTrack/
-├── main.py            # Mainlogic
-├── utils.py           # Different utilites for functions
-├── log_handler.py     # Handles loading and saving log data
-├── Logs               
-    └── log.json       # Log file (auto-created)
-└── README.md          # This file
+ProtoTrack/\
+├── main.py            # Mainlogic\
+├── utils.py           # Different utilites for functions\
+├── log_handler.py     # Handles loading and saving log data\
+├── Logs               \
+    └── log.json       # Log file (auto-created)\
+└── README.md          # This file\
 
 
 ## Example Entry:
 
-{
-  "Project": "Ergo Chair",
-  "Responsible": "Kaare",
-  "Title": "Adjusted Backrest",
-  "Description": "Changed the angle by 5 degrees after user testing",
-  "References": "Test Session 03",
-  "Date": "17/04/2025"
+{\
+  "Project": "Ergo Chair",\
+  "Responsible": "Kaare",\
+  "Title": "Adjusted Backrest",\
+  "Description": "Changed the angle by 5 degrees after user testing",\
+  "References": "Test Session 03",\
+  "Date": "17/04/2025"\
 }
