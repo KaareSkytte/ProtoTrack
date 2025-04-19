@@ -30,7 +30,8 @@ def main():
     if "3" in option or "filter" in option.lower():
         filterEntries()
 
-
+    if "4" in option or "export" in option.lower():
+        exportData()
 
     if "5" in option or "exit" in option.lower():
         exit()

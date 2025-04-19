@@ -91,3 +91,53 @@ def filterEntries():
             print("Date         : ", filteredEntries[i]["Date"], "\n")
     else: 
         print("No Entries Found...")
+
+
+def exportData():
+    exportType = input("Choose export format (1. for plain text, 2 for markdown): ")
+
+    if exportType == "1":
+        fileExtension = ".txt"
+        format = "text"
+
+    elif exportType == "2":
+        fileExtension = ".md"
+        format = "markdown"
+
+    else: 
+        print("Invalid choice")
+        return
+
+    name = input("Enter a file name: ")
+    log = loadLog()
+    fileName = name +  fileExtension
+
+    def formatEntry(entry, format):
+        if format == "text":
+            return (
+                f"Project: {entry['Project']}\n"
+                f"Responsible: {entry['Responsible']}\n"
+                f"Title: {entry['Title']}\n"
+                f"Description: {entry['Description']}\n"
+                f"References: {entry['References']}\n"
+                f"Date: {entry['Date']}\n"
+                + "-" * 30 + "\n"
+            )
+        elif format == "markdown":
+            return (
+                f"### Project: {entry['Project']}\n"
+                f"- **Responsible**: {entry['Responsible']}\n"
+                f"- **Title**: {entry['Title']}\n"
+                f"- **Description**: {entry['Description']}\n"
+                f"- **References**: {entry['References']}\n"
+                f"- **Date**: {entry['Date']}\n"
+                + "---\n"
+            )
+
+    with open (fileName, 'w+') as f:
+        for entry in log:
+            f.write(formatEntry(entry, format))
+
+    print(f"Log exported successfully as {fileName}")
+
+
